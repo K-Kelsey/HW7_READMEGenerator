@@ -33,7 +33,7 @@
     
 ```
     ##Example of how the generator works
-    
+    ![video](Untitled_ Sep 30, 2021 5_47 PM (1))
     
 
 https://user-images.githubusercontent.com/87803018/135552224-92fbc996-296d-4639-9273-6e053fd9edd4.mp4
