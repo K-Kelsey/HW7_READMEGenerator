@@ -33,5 +33,7 @@
     
 ```
     ##Example of how the generator works
-![video](GeneratorClip.mp4)
-<iframe src="https://drive.google.com/file/d/1hDtGxzzN2W4EfuFCbTKH3_fpu-fzFA3G/preview" width="640" height="480" allow="autoplay"></iframe>
+    
+    
+
+https://user-images.githubusercontent.com/87803018/135552224-92fbc996-296d-4639-9273-6e053fd9edd4.mp4
