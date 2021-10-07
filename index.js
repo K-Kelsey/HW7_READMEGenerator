@@ -5,8 +5,9 @@ const inquirer = require('inquirer');
 //retrieves generateMarkdown.js module
 const MarkdownGenerator = require('./utils/generateMarkdown');
 
+
 //array of questions for user input
-inquirer.prompt ([
+inquirer.prompt([
     {
         type: 'input',
         name: 'user_name',
@@ -41,7 +42,7 @@ inquirer.prompt ([
         type: 'list',
         name: 'license',
         message: 'What license(s) do you wish to use for your project?',
-        choices: ['MIT', 'Apache 2.0', 'IBM', 'Mozilla', 'None']
+        choices: ['MIT', 'AGPL v3', 'GPL v3', 'LGPL v3', 'MPL 2.0', 'Apache 2.0', 'Boost 1.0', 'Zlib', 'None']
     },
 
     {
@@ -74,9 +75,9 @@ inquirer.prompt ([
         message: 'What command will allow users to run this project?'
     }
 ])
-.then((response) => {
-    const data = MarkdownGenerator(response);
-    fs.writeFile("READMEgenerator.md", data, (err) =>
-    err ? console.error(err) : console.log('Markdown succesfully made!')
-    );
-});
+    .then((response) => {
+        const data = MarkdownGenerator(response);
+        fs.writeFile("READMEgenerator.md", data, (err) =>
+            err ? console.error(err) : console.log('Markdown succesfully made!')
+        );
+    });

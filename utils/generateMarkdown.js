@@ -1,16 +1,17 @@
 function renderLicenseBadge(license) {
-    return ` ![${license} license] (https://img.shields.io/badge/license-${license}-Red.svg)`
+    return `![${encodeURI(license)} license](https://img.shields.io/badge/License-${encodeURI(license)}-yellow.svg)(https://opensource.org/licenses/${encodeURI(license)})`
 }
 
+
 function renderLicenseLink(license) {
-    license !== 'None' ? `* [License](license)`:''
+    return license !== 'None' ? `* [License](license)`:''
 }
 
 function renderLicenseSection(license) {
     if(license !== 'None') {
         return (
             ` # License
-            This project is license under the ${license} license
+            This project is license under the ${encodeURI(license)} license
             `
         )
     }
@@ -20,38 +21,38 @@ function renderLicenseSection(license) {
 //generate the markdown using the answers from the prompted questions
 function generateMarkdown(data) {
     return `# ${data.user_name}
-    ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 ## INSTRUCTIONS
-    ${data.description}
+${data.description}
 
-    ##Table of Contents
-    *[Installation] (#installation)
-    *[Usage] (#usage)
-    ${renderLicenseLink(data.license)}
-    *[Contributing] (#contributing)
-    *[Tests] (#tests)
-    *[Questions](#questions)
+##Table of Contents
+*[Installation] (#installation)
+*[Usage] (#usage)
+*${renderLicenseLink(data.license)}
+*[Contributing] (#contributing)
+*[Tests] (#tests)
+*[Questions](#questions)
 
-    ##Installation
-    ${data.installation}
+##Installation
+${data.installation}
 
-    ##Usage
-    ${data.uses}
+##Usage
+${data.uses}
 
-    ${renderLicenseSection(data.license)}
+${renderLicenseSection(data.license)}
 
-    ##Contributing
-    ${data.contribution}
+##Contributing
+${data.contribution}
 
-    ##Tests
-    ${data.tests}
+##Tests
+${data.tests}
 
-    ##Questions
+##Questions
 
-    If you have any questions regarding the repo published, please feel free to reach out to me at ${data.email},
-    if you would like to look at the code that made this generator, you can find this under my repos in GitHub. My GitHub
-    username is ${data.github_username}
-    `;
+If you have any questions regarding the repo published, please feel free to reach out to me at ${data.email},
+if you would like to look at the code that made this generator, you can find this under my repos in GitHub. My GitHub
+username is ${data.github_username}
+`;
 }
 
 module.exports = generateMarkdown;
