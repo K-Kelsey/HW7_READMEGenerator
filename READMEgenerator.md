@@ -29,6 +29,13 @@ This project can be tested by visiting my GitHub repositories, cloning the HW7_R
 
 ##Questions
 
-If you have any questions regarding the repo published, please feel free to reach out to me at kadenkelsey33@gmail.com,
-if you would like to look at the code that made this generator, you can find this under my repos in GitHub. My GitHub
-username is K-Kelsey
+
+    If you have any questions regarding the repo published, please feel free to reach out to me at kadenkelsey33@gmail.com,
+    if you would like to look at the code that made this generator, you can find this under my repos in GitHub. My GitHub
+    username is K-Kelsey
+    
+
+##Example of how the generator works
+    
+    
+    https://user-images.githubusercontent.com/87803018/135552224-92fbc996-296d-4639-9273-6e053fd9edd4.mp4
